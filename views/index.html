@@ -1,0 +1,105 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <title>Unwrapped for Spotify</title>
+    
+    <meta name="description" content="A Spotify playlist analyzer">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/project-avatar/b96c147f-8065-40a6-9908-4fcafce2a361.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <meta http-equiv="Content-Security-Policy" 
+          content="script-src-elem 'self'  https://*.jquery.com; 
+                   script-src-elem 'self'  https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/*;
+                   script-src-elem 'self'  https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D/p5.collide2d.min.js;
+                   frame-src 'self' *;
+                   connect-src 'self' https://*.doubleclick.net;
+                   img-src 'self' https://*.glitch.com;
+                   font-src 'self' https://sp-bootstrap.global.ssl.fastly.net;
+                   style-src-elem 'self' https://sp-bootstrap.global.ssl.fastly.net;"> -->
+    <!-- data: gap: https://ssl.gstatic.com 'unsafe-eval';  'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** -->
+    <link href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    
+    <header>
+      
+      <marquee direction="down" width="100%" height="200" behavior="alternate" >
+  <marquee behavior="alternate">
+   <img src="https://images-na.ssl-images-amazon.com/images/I/51rttY7a%2B9L.png" alt="logo" style="width:170px;height:170px;">
+  </marquee>
+</marquee>
+     
+    <div class="typewriter">  
+      <h1>
+        Unwrapped
+      </h1>
+      </div>
+      <h3>
+        Playlist analysis made easy.
+      </h3>
+    </header>
+
+    <main>
+      <button class="btn btn-primary" id="login">Log in with Spotify</button>
+      <a href="/logout" class="btn btn-secondary">Log out</a>
+      <div id="data-container">
+        <ol>
+        </ol>
+      </div>
+      <div id = "welcome-container"></div>
+      <div id = "analysis-container"></div>
+      <div id = "visualization-container"></div>
+      <div id ="data2-container">
+        <h3 id="continueMessage" style="display: none;"> Select another category: </h3>
+        <button class="btn btn-primary" id="artistButton" style="font-size: 20px; display: none;">Artist</button>
+        <div style="line-height:75%;"><br></div>
+        <button class="btn btn-primary" id="durationButton" style="font-size: 20px; display: none;">Duration</button>
+        <div style="line-height:75%;"><br></div>
+<!--         <button class="btn btn-primary" id="genreButton" style="font-size: 20px; display: none;">Genre</button>
+        <div style="line-height:75%;"><br></div> -->
+        <button class="btn btn-primary" id="popularityButton" style="font-size: 20px; display: none;">Popularity</button>
+        <div style="line-height:75%;"><br></div>
+        <button class="btn btn-primary" id="releaseDateButton" style="font-size: 20px; display: none;">Release Date</button>
+      </div>
+      <div class="float-container" id="data2">
+        <div class="float-child">
+          <form>
+          <input id="playlistSelectionInput" type="number" min="1" max="20" step="1" size="2" style="font-size:28px; display:none;">
+          </form>
+        </div>
+        <div class ="float-child">
+          <button class="btn btn-info" id="playlistSelectionButton" style="display: none;">Select Playlist</button>
+        </div>
+      </div>
+      
+     <!-- <div class="flier"><img src="https://images-na.ssl-images-amazon.com/images/I/51rttY7a%2B9L.png" alt="logo" style="width:180px;height:180px;"/></div> -->
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    
+    <script src="/script.js"></script>
+    <script src="/client.js"></script>
+    <script src="/logo1.js"></script> 
+    
+    <!-- import p5 things -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    
+  </body>
+</html>
